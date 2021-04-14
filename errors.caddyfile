@@ -1,0 +1,8 @@
+(default_errors) {
+	handle_errors {
+		root * /etc/caddy/snippets/errors
+		rewrite * /error.html
+		templates
+		file_server 
+	}
+}

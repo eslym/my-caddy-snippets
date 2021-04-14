@@ -1,0 +1,6 @@
+(redirect_https) {
+	@http {
+		protocol http
+	}
+	redir @http https://{host}{uri}
+}
