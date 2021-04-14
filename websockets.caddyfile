@@ -1,0 +1,7 @@
+(websockets) {
+    @websockets {
+        header_regexp Connection Upgrade
+        header        Upgrade websocket
+    }
+    reverse_proxy @websockets {args.0}
+}
