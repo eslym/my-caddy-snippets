@@ -1,0 +1,9 @@
+(socket-io) {
+	@websockets {
+		header_regexp Connection Upgrade
+		header Upgrade websocket
+	}
+	reverse_proxy @websockets {args.0}
+	reverse_proxy /socket.io/* {args.0}
+	redir /socket.io /socket.io/
+}
